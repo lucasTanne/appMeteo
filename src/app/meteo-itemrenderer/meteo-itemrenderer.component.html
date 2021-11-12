@@ -1,5 +1,5 @@
 <div id="item_weather" >
-    <p *ngIf="meteoItem">{{ meteoItem.dt_txt }}</p>
-    <p *ngIf="meteoItem">{{ meteoItem.main.temp }} °C</p>
+    <p *ngIf="meteoItem">{{ meteoItem.dt_txt | date: 'fullDate' }}</p>
+    <p *ngIf="meteoItem">{{ meteoItem.main.temp | pipeDegree: 'bla'}} </p>
     <p *ngIf="meteoItem">humidity: {{ meteoItem.main.humidity }}</p>
 </div>

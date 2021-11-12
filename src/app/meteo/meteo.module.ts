@@ -6,6 +6,7 @@ import { MeteoItemrendererComponent } from '../meteo-itemrenderer/meteo-itemrend
 import { FormsModule } from '@angular/forms';
 import { MeteoService } from './services/meteo.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PipeDegreePipe } from '../pipe-degree.pipe';
 
 
 
@@ -13,7 +14,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   declarations: [
     MeteoViewComponent,
     MeteoSearchComponent,
-    MeteoItemrendererComponent
+    MeteoItemrendererComponent,
+    PipeDegreePipe
   ],
   imports: [
     CommonModule,
