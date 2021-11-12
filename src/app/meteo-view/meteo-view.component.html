@@ -1,0 +1,11 @@
+<div id="DonneesVille">
+    <app-meteo-search (open)="searchHandler($event)"></app-meteo-search>
+    <p *ngIf="meteoResult">{{ meteoResult.city.name }} - {{ meteoResult.city.coord.lat }} | {{ meteoResult.city.coord.lon }}</p>
+    <p *ngIf="meteoResult">{{ meteoResult.city.population }} habitants</p>
+    <div *ngIf="meteoResult">
+        <p *ngFor="let elem of meteoResult.list">
+            <app-meteo-itemrenderer [meteoItem]="elem"></app-meteo-itemrenderer>
+        </p>
+    </div>
+    
+</div>
