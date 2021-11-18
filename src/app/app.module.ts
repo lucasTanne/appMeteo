@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
 
 import { AppComponent } from './app.component';
-import { MeteoModule } from './meteo/meteo.module';
+import { MeteoGeolocComponent } from './meteo-geoloc/meteo-geoloc.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MeteoGeolocComponent
   ],
   imports: [
     BrowserModule,
-    MeteoModule
+    AppRoutingModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

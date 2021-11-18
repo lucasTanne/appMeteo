@@ -7,7 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { MeteoService } from './services/meteo.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PipeDegreePipe } from '../pipe-degree.pipe';
+import { RouterModule, Routes } from '@angular/router';
 
+export const MeteoRouteList: Routes = [
+  {
+    path: '**',
+    component: MeteoViewComponent
+  }
+]
 
 
 @NgModule({
@@ -20,7 +27,8 @@ import { PipeDegreePipe } from '../pipe-degree.pipe';
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forChild(MeteoRouteList)
   ],
   exports: [
     MeteoViewComponent,
